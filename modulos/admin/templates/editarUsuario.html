@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+{include file="header.html"}
+{include file="menu.html"}
+
+<div class="after-box">
+    <form id="sesion" method="post" action="editarUsuario.php" style="padding-bottom: 9.5em;width: 400;">
+        <h2>Seleccionar usuario</h2>    
+        <select name="cedula" required> 
+            <option value="">seleccione</option> 
+            {foreach from=$usuarios item=gmtr} 
+            <option value="{$gmtr.cedula}">{$gmtr.nombre}</option> 
+            {/foreach} 
+        </select>
+        <input type="hidden"  name="accion" value="consulta">
+        <input type="submit" value="CONSULTAR USUARIO">
+    </form>
+</div>
+<div class="after-box">
+    <form id="sesion" method="post" action="editarUsuario.php" style="padding:;width: 400;">
+        <h2>Formulario de edicion</h2>
+        <label> Nombre</label><br/>
+        <input type="hidden" name="cedula" value="{$cedula}" required>
+        <input type="text" name="nombre" value="{$nombre}" required><br/>
+        <label> Usuario</label><br/>
+        <input type="text" name="usuario" value="{$usuario}" required><br/>
+        <label> Contraseña</label><br/>
+        <input type="password" name="pasword"  value="{$pasword}" required><br/><br/>
+        <input type="hidden"  name="accion" value="editar">
+        <input type="submit" value="EDITAR USUARIO">
+        {$msj}
+    </form>
+</div>
+<div class="after-box">
+    <form id="sesion" method="post" action="editarUsuario.php" style="padding-bottom: 4em;width:400;">
+        <h2>Formulario de Eliminar</h2>
+        <label> Nombre</label><br/>
+        <input type="text" name="ced" value="{$cedula}" readonly><br/>
+        <label> Usuario</label><br/>
+        <input type="text" name="usuer" value="{$usuario}" readonly><br/>
+        <input type="hidden"  name="accion" value="eliminar">
+        <input type="submit" value="ELIMINAR USUARIO">
+        {$msj}
+    </form>
+
+</div> 
+    <h2>listado Usuarios</h2>
+    {$tabla_html}
+</body>
+</html>        

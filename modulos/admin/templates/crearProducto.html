@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+{include file="header.html"}
+{include file="menu.html"}
+
+<div class="cont" style="">
+    <h2>Crear Producto</h2>
+        <form id="sesion" method="post" action="crearProducto.php">
+            <label> Nombre</label><br/>
+            <input type="text" name="nombre" required><br/>
+            <label> cantidad</label><br/>
+            <input type="text" name="cantidad" required><br/>
+            <label> precio</label><br/>
+            <input type="text" name="precio" required><br/><br/>
+            <input type="submit" value="CREAR PRODUCTO">
+            {$msj}
+        </form>
+        {$tabla_html}
+</div>   
+</body>
+</html>        

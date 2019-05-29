@@ -5,9 +5,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-require_once $_SERVER['DOCUMENT_ROOT'] . '/trabajo/class/ClassSmarty.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/trabajo/class/tablahtml.php';
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/trabajo/modulos/admin/modelo/Persona.php';
+include 'cofig.inc';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/". $GLOBALS['work'] . '/class/ClassSmarty.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/". $GLOBALS['work'] . '/class/tablahtml.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/". $GLOBALS['work'] . '/modulos/admin/modelo/Persona.php';
 /**
  * Description of crearUsuario
  *
@@ -39,8 +40,8 @@ class crearUsuario extends ClassSmarty {
             echo '<h2>Usuario registrado con exito</h2>';
         }
         $this->vista1();
-        
-        
+
+
     }
 
     private function vista1() {

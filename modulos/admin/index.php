@@ -5,7 +5,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-require_once $_SERVER['DOCUMENT_ROOT'] . '/trabajo/class/ClassSmarty.php';
+include 'cofig.inc';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/". $GLOBALS['work'] . '/class/ClassSmarty.php';
 
 /**
  * Description of index
@@ -47,7 +48,7 @@ class ClassHome extends ClassSmarty {
     }
 
     private function iniciarSession() {
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/trabajo/modulos/admin/modelo/Persona.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/". $GLOBALS['work'] . '/modulos/admin/modelo/Persona.php';
         $Persona = new Persona();
         $Persona->setUsuario($this->data['user']);
         $Persona->setPasword($this->data['pass']);

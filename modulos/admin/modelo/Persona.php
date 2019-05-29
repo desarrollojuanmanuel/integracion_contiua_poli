@@ -5,7 +5,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-require_once $_SERVER['DOCUMENT_ROOT'] . '/trabajo/lib/db/config/DAO.php';
+ include 'cofig.inc';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/". $GLOBALS['work'] . '/lib/db/config/DAO.php';
 
 /**
  * Description of Persona
@@ -29,7 +30,7 @@ class Persona extends DAO {
     }
 
     /**
-     * Método sobre escrito 
+     * Mï¿½todo sobre escrito
      * @param type transactioninterface
      */
     public function arraymap() {
@@ -42,7 +43,7 @@ class Persona extends DAO {
     }
 
     /**
-     * Método sobre escrito 
+     * Mï¿½todo sobre escrito
      * @param type transactioninterface
      */
     public function consultaUsuario() {
@@ -55,7 +56,7 @@ class Persona extends DAO {
     }
 
     /**
-     * Método sobre escrito 
+     * Mï¿½todo sobre escrito
      * @param type transactioninterface
      */
     public function editarPersona() {
@@ -76,7 +77,7 @@ class Persona extends DAO {
     }
 
     /**
-     * Método sobre escrito 
+     * Mï¿½todo sobre escrito
      * @param type transactioninterface
      */
     public function eliminarPersona() {
@@ -87,7 +88,7 @@ class Persona extends DAO {
     }
 
     /**
-     * Método para insertar un nuevo registro
+     * Mï¿½todo para insertar un nuevo registro
      */
     public function crearPersona() {
         $this->_arraymap['usuario'] = $this->usuario;
@@ -102,7 +103,7 @@ class Persona extends DAO {
     }
 
     /**
-     * Método que genera una nueva condición para actualizar o eliminar
+     * Mï¿½todo que genera una nueva condiciï¿½n para actualizar o eliminar
      */
     public function listarPersonas() {
         $this->_namefilecondition = "cedula";

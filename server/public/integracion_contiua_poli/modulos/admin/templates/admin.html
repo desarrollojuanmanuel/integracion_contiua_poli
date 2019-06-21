@@ -1,0 +1,19 @@
+{include file="header.html"}
+
+        <div id="menu" style="display: {$est}">
+            {include file="menu.html"}
+        </div>
+        <div class="cont" style="display:{$est_log}">
+            <h2>INICIAR SESION</h2>
+            <form id="sesion" method="post" action="index.php">
+                <label> Usuario</label>
+                <input type="text" name="user">
+                <label> Contraseña</label>
+                <input type="password" name="pass">
+                <input type="submit" value="INGRESAR">
+                <input type="hidden" name="accion" value="login">
+                {$msj_err}
+            </form>
+        <div>
+    </body>
+</html>

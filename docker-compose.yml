@@ -1,0 +1,20 @@
+version: '2'
+services:
+  server:
+    build: .
+    ports:
+     - "8080:80"
+    volumes:
+     - ./server/public:/var/www/html/
+  db:
+    container_name: mysql5
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: trabajo
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ''
+    ports:
+      - 6033:3306    

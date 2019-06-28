@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+{include file="header.html"}
+{include file="menu.html"}
+
+<div class="cont" style="">
+    <h2>Crear Usuario</h2>
+        <form id="sesion" method="post" action="crearUsuario.php">
+            <label> Cedula</label><br/>
+            <input type="text" name="cedula" required><br/>
+            <label> Nombre</label><br/>
+            <input type="text" name="nombre" required><br/>
+            <label> Usuario</label><br/>
+            <input type="text" name="usuario" required><br/>
+            <label> Contraseña</label><br/>
+            <input type="password" name="pasword" required><br/><br/>
+            <input type="submit" value="NUEVO USUARIO">
+            {$msj}
+        </form>
+        {$tabla_html}
+</div>   
+</body>
+</html>        

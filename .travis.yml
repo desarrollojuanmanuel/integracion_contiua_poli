@@ -1,0 +1,9 @@
+language: php
+services:
+  - docker
+ 
+before_install:
+  - docker build --rm .
+  - docker run -d -P . /bin/sh -c
+script:
+  - docker-compose up --build

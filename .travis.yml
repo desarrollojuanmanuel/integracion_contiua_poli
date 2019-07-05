@@ -4,6 +4,5 @@ services:
  
 before_install:
   - docker build --rm .
-  - docker run -d -P . /bin/sh -c
-script:
+  script:
   - docker-compose up --build

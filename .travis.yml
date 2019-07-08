@@ -1,6 +1,5 @@
 language: php
 services:
   - docker
- 
   script:
   - docker-compose up --build
